@@ -14,6 +14,12 @@ Vue.use(Vant)
 // 加载全局样式
 import './styles/global.css'
 
+// 加载 dayjs  初始化配置
+import '@/utils/dayjs.js'
+
+// 动态 加载 rem 基准值
+import 'amfe-flexible'
+
 Vue.config.productionTip = false
 
 new Vue({
