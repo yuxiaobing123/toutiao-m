@@ -12,6 +12,8 @@ const Home = () => import('@/views/home/Home.vue')
 const Question = () => import('@/views/question/Question.vue')
 const Video = () => import('@/views/video/Video.vue')
 const Profile = () => import('@/views/profile/Profile.vue')
+// 导入搜索页面的路由组件
+const Search = () => import('@/views/search/Search.vue')
 
 // 路由表
 const routes = [
@@ -47,6 +49,11 @@ const routes = [
         component: Profile
       }
     ]
+  },
+  {
+    path: '/search',
+    name: 'search',
+    component: Search
   }
 ]
 
