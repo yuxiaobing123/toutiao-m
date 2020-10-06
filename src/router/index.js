@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 // 导入登录页面的路由
-const Login = () => import('../views/login/Login.vue')
+const Login = () => import('@/views/login/Login.vue')
 // 导入底部导航栏区域
 const TabBar = () => import('@/views/layout/Tabbar.vue')
 // 导入底部导航栏的子路由规则
@@ -14,6 +14,8 @@ const Video = () => import('@/views/video/Video.vue')
 const Profile = () => import('@/views/profile/Profile.vue')
 // 导入搜索页面的路由组件
 const Search = () => import('@/views/search/Search.vue')
+// 导入文章详情的路由组件
+const Article = () => import('@/views/article/Article.vue')
 
 // 路由表
 const routes = [
@@ -54,6 +56,12 @@ const routes = [
     path: '/search',
     name: 'search',
     component: Search
+  },
+  {
+    path: '/article/:articleId',
+    name: 'article',
+    component: Article,
+    props: true // 开启路由传参  也就是把路由参数映射到组件的 props 数据中
   }
 ]
 

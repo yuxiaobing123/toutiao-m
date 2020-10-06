@@ -61,7 +61,8 @@ export default {
       this.isResultShow = true
     },
     onCancel() {
-      this.$toast('取消')
+      // this.$toast('取消')
+      this.$router.back()
     },
   },
   components: {

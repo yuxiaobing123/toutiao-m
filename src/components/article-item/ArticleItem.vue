@@ -1,5 +1,5 @@
 <template>
-<van-cell class="article-item">
+<van-cell class="article-item" :to="`/article/${article.art_id}`">
   <div slot="title" class="title">{{ article.title }}</div>
   <div slot="label">
     <!-- 三张图片的位置是在标题的下边  标签的上边 -->
