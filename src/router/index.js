@@ -16,6 +16,8 @@ const Profile = () => import('@/views/profile/Profile.vue')
 const Search = () => import('@/views/search/Search.vue')
 // 导入文章详情的路由组件
 const Article = () => import('@/views/article/Article.vue')
+// 导入用户的个人资料组件
+const UserProfile = () => import('@/views/user-profile/UserProfile.vue')
 
 // 路由表
 const routes = [
@@ -62,6 +64,11 @@ const routes = [
     name: 'article',
     component: Article,
     props: true // 开启路由传参  也就是把路由参数映射到组件的 props 数据中
+  },
+  {
+    path: '/user/profile',
+    name: 'user-profile',
+    component: UserProfile
   }
 ]
 

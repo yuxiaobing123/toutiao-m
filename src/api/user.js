@@ -59,3 +59,29 @@ export const deleteFollow = userId => {
     method: 'DELETE'
   })
 }
+
+// 获取当前登录用户的个人信息
+export const getUserProfile = () => {
+  return request({
+    method: 'GET',
+    url: '/app/v1_0/user/profile'
+  })
+}
+
+// 更新用户个人信息
+export const updateUserProfile = data => {
+  return request({
+    method: 'PATCH',
+    url: '/app/v1_0/user/profile',
+    data
+  })
+}
+
+// 编辑用户的头像
+export const updateUserPhoto = data => {
+  return request({
+    url: '/app/v1_0/user/photo',
+    method: 'PATCH',
+    data
+  })
+}
